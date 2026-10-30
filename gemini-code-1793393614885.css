@@ -1,0 +1,493 @@
+/* ==========================================================================
+   VARIABLES Y ESTILOS BASE (Lujo, Negro, Rojo Oscuro, Amarillo Dorado Tenue)
+   ========================================================================== */
+:root {
+    --color-amarillo-tenue: #fbf6ec; /* Crema marfil muy elegante para fondos */
+    --color-amarillo-dorado: #d4af37;/* Oro tenue de acento lujoso */
+    --color-rojo-parrilla: #7a1c1c;  /* Borgoña / Rojo vino profundo */
+    --color-rojo-hover: #5e1515;
+    --color-negro-carbon: #110e0d;   /* Negro noche absoluto */
+    --color-gris-caja: #221d1b;
+    --color-blanco: #ffffff;
+    --color-borde: #dfd1b8;
+    --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-amarillo-tenue);
+    color: var(--color-negro-carbon);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+.main-header {
+    background-color: var(--color-negro-carbon);
+    color: var(--color-amarillo-tenue);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border-bottom: 2px solid var(--color-amarillo-dorado);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+}
+
+.logo {
+    font-size: 1.35rem;
+    color: var(--color-amarillo-dorado);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--color-amarillo-tenue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-amarillo-dorado);
+}
+
+.badge-count {
+    background-color: var(--color-rojo-parrilla);
+    color: var(--color-blanco);
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO / EXPERIENCIA TURÍSTICA DE LUJO
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(17, 14, 13, 0.85), rgba(17, 14, 13, 0.85)), 
+                url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    color: var(--color-amarillo-tenue);
+    padding: 6rem 1.5rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.2);
+    color: var(--color-amarillo-dorado);
+    border: 1px solid var(--color-amarillo-dorado);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2.6rem;
+    color: var(--color-amarillo-dorado);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #e5dec9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   CONTENEDORES Y REJILLA DE PRODUCTOS (LUJO)
+   ========================================================================== */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.bg-alt {
+    background-color: #f2e9d4;
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--color-rojo-parrilla);
+    font-size: 2.1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #554f49;
+    margin-bottom: 3rem;
+    font-size: 1.05rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2.2rem;
+}
+
+/* Tarjetas refinadas */
+.card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.card-img-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-container img {
+    transform: scale(1.04);
+}
+
+.card-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--color-rojo-parrilla);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: bold;
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-green { background-color: #1b5e28; }
+.tag-gold { background-color: #b38a22; color: #110e0d; }
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 1.25rem;
+    color: var(--color-negro-carbon);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.card-body .description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.card-body .price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--color-rojo-parrilla);
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   BOTONES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.4rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s;
+    font-size: 0.95rem;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--color-rojo-parrilla);
+    color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-rojo-hover);
+}
+
+.btn-secondary {
+    background-color: var(--color-negro-carbon);
+    color: var(--color-amarillo-dorado);
+    border: 1px solid var(--color-amarillo-dorado);
+}
+
+.btn-secondary:hover {
+    background-color: #26201e;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--color-rojo-parrilla);
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   CHECKOUT Y CARRITO DE LUJO
+   ========================================================================== */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    background-color: var(--color-blanco);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.cart-box {
+    background-color: #f7f1e3;
+    padding: 1.8rem;
+    border-radius: 6px;
+    border: 1px solid #ebdcb9;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #ebdcb9;
+    padding-bottom: 0.6rem;
+}
+
+.cart-header h3 {
+    color: var(--color-negro-carbon);
+}
+
+.cart-items-container {
+    min-height: 140px;
+    max-height: 350px;
+    overflow-y: auto;
+    margin-bottom: 1.2rem;
+}
+
+.cart-empty-text {
+    color: #777;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+}
+
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eae3d2;
+}
+
+.cart-item-info strong {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--color-negro-carbon);
+}
+
+.cart-item-info span {
+    font-size: 0.82rem;
+    color: #666;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-qty {
+    background-color: #e5d7bd;
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-qty:hover {
+    background-color: #d2c2a4;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.cart-summary-footer {
+    border-top: 2px solid #ebdcb9;
+    padding-top: 1rem;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+}
+
+.total-line {
+    font-size: 1.2rem;
+    color: var(--color-rojo-parrilla);
+    font-weight: bold;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ebdcb9;
+    margin: 0.6rem 0;
+}
+
+/* Formulario */
+.checkout-form h3 {
+    margin-bottom: 1.2rem;
+    color: var(--color-negro-carbon);
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.checkout-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+    color: #333;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #c8bcab;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: #fff;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus {
+    outline: none;
+    border-color: var(--color-rojo-parrilla);
+    box-shadow: 0 0 0 2px rgba(122, 28, 28, 0.1);
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
+.main-footer {
+    background-color: var(--color-negro-carbon);
+    color: var(--color-amarillo-tenue);
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.9rem;
+    border-top: 2px solid var(--color-amarillo-dorado);
+}
+
+.main-footer .copyright {
+    color: #888;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+}
+
+/* Responsividad extra */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}

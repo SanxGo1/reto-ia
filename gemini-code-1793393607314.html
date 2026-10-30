@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steakhouse de lujo y experiencia turística exclusiva. Cortes finos al carbón, carne oreada artesanal y el auténtico ambiente de alta gama del Antiguo Oeste.">
+    <title>The Heritage Steakhouse | Alta Cocina & Reserva Exclusiva</title>
+    <link rel="stylesheet" href="gemini-code-1793393614885.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="logo">⚜️ The Heritage Steakhouse</h1>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Experiencia</a></li>
+                    <li><a href="#menu">Alta Culinaria</a></li>
+                    <li><a href="#catalogo">Cortes Reserva (Vacío)</a></li>
+                    <li><a href="#checkout" class="cart-link">Reserva / Carrito 🛒 <span id="cart-counter" class="badge-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección 1: Hero / Bienvenida Turística -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <span class="hero-badge">Exclusive Fine Dining</span>
+                <h2>El Lujo del Sabor Legendario</h2>
+                <p>Una parada obligatoria para viajeros y sibaritas. Disfrute de nuestra exclusiva carne oreada, cortes madurados y la elegancia del viejo oeste a otro nivel.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Explorar Menú de Lujo</a>
+                    <a href="#checkout" class="btn btn-secondary">Gestionar Reserva</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Menú Gastronómico (Servido) -->
+        <section id="menu" class="section-container">
+            <h2 class="section-title">Alta Cocina a la Parrilla</h2>
+            <p class="section-subtitle">Selección de autor del chef para experiencias culinarias memorables</p>
+            
+            <div class="product-grid" id="menu-grid">
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Carne Oreada de Autor" loading="lazy">
+                        <span class="card-tag">Especialidad del Chef</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Carne Oreada de Autor (Dry-Aged)</h3>
+                        <p class="description">Corte fino madurado en cámara controlada, marinado con especias finas y reducción de vino tinto. Acompañado de puré trufado.</p>
+                        <p class="price">$ 58.000 COP</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p1" data-name="Carne Oreada de Autor" data-price="58000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80" alt="Chata Premium" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Chata Premium Reserva (450g)</h3>
+                        <p class="description">Lomo ancho de exportación asado a la leña de roble, sellado a la perfección con mantequilla de hierbas aromáticas.</p>
+                        <p class="price">$ 72.000 COP</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p2" data-name="Chata Premium Reserva (450g)" data-price="72000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=800&q=80" alt="Punta de Anca Angus" loading="lazy">
+                        <span class="card-tag tag-gold">Signature Cut</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Punta de Anca Angus (450g)</h3>
+                        <p class="description">Corte certificado con infiltración de grasa ideal, corteza crujiente al carbón y jugosidad inigualable de categoría internacional.</p>
+                        <p class="price">$ 79.000 COP</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p3" data-name="Punta de Anca Angus (450g)" data-price="79000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80" alt="Sobrebarriga Gourmet" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Sobrebarriga Gourmet al Vino</h3>
+                        <p class="description">Cocción lenta durante 12 horas en reducción de vino tinto y vegetales rustizados, sobre cama de polenta cremosa.</p>
+                        <p class="price">$ 64.000 COP</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p4" data-name="Sobrebarriga Gourmet al Vino" data-price="64000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección 3: Catálogo de Cortes Exclusivos (Para llevar / Coleccionistas) -->
+        <section id="catalogo" class="section-container bg-alt">
+            <h2 class="section-title">Cortes Empacados al Vacío (Edición Coleccionista)</h2>
+            <p class="section-subtitle">Lleve la experiencia de alta cocina a su residencia o siguiente destino de viaje</p>
+            
+            <div class="product-grid" id="catalogo-grid">
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=800&q=80" alt="Corte Fresco de Exportación" loading="lazy">
+                        <span class="card-tag tag-green">Certificado Exportación</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Corte Selección Premium (1 Kg)</h3>
+                        <p class="description">Lomo fino empacado al vacío con tecnología de conservación térmica para viajeros exigentes.</p>
+                        <p class="price">$ 85.000 COP / Kg</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p5" data-name="Corte Selección Premium (1 Kg)" data-price="85000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Baúl de Cortes Wagyu/Angus" loading="lazy">
+                        <span class="card-tag tag-gold">Edición Limitada</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Baúl The Heritage (Pack 3 Kg)</h3>
+                        <p class="description">Selección de Punta de Anca Angus, Chata Reserva y Carne Oreada de Autor en presentación de lujo para regalo o asado VIP.</p>
+                        <p class="price">$ 240.000 COP</p>
+                        <button type="button" class="btn btn-primary add-to-cart-btn" data-id="p6" data-name="Baúl The Heritage (Pack 3 Kg)" data-price="240000">Añadir a la Orden</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección 4: Checkout / Gestión de Pedidos y Reservas -->
+        <section id="checkout" class="section-container">
+            <h2 class="section-title">Confirmación de Pedido y Servicio VIP</h2>
+            
+            <div class="checkout-layout">
+                <!-- Panel del Carrito de Lujo -->
+                <div class="cart-box">
+                    <div class="cart-header">
+                        <h3>Resumen de Experiencia</h3>
+                        <button type="button" id="clear-cart-btn" class="btn-text">Vaciar Selección</button>
+                    </div>
+
+                    <div id="cart-items-container" class="cart-items-container">
+                        <!-- Dinámico por JS -->
+                    </div>
+
+                    <div class="cart-summary-footer">
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <strong id="cart-subtotal">$ 0 COP</strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>Servicio de Conserjería / Envío VIP:</span>
+                            <strong id="cart-shipping">$ 12.000 COP</strong>
+                        </div>
+                        <hr class="divider">
+                        <div class="summary-line total-line">
+                            <span>Total Estimado:</span>
+                            <strong id="cart-total">$ 0 COP</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Datos del Turista -->
+                <form id="checkout-form" class="checkout-form">
+                    <h3>Coordinación de Entrega o Reserva en Mesa</h3>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Titular / Huésped:*</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Dr. Alexander Vance" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp de Contacto:*</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 300 987 6543" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Hotel, Residencia o Dirección de Destino:*</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ej. Hotel Boutique Casco Histórico, Suite 402" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pago">Método de Pago Internacional / Nacional:*</label>
+                        <select id="pago" name="pago" required>
+                            <option value="tarjeta-internacional">Tarjeta de Crédito Internacional (Visa / Mastercard)</option>
+                            <option value="transferencia">Transferencia Bancaria VIP</option>
+                            <option value="efectivo">Efectivo / Moneda Extranjera aceptada</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notas">Preferencias del Huésped (Término, Idioma de atención):</label>
+                        <textarea id="notas" name="notas" rows="3" placeholder="Ej. Inglés preferido. Carne a tres cuartos (Medium-Well)."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar Orden de Lujo</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p><strong>⚜️ The Heritage Steakhouse</strong> - Haute Cuisine & Western Legacy.</p>
+            <p>Atención Exclusiva Reservada para Turistas y Residentes Distinguidos | Colombia</p>
+            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="gemini-code-1793393635645.js"></script>
+</body>
+</html>
